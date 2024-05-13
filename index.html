@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Board Themes</title>
+    <style>
+        /* Style for input theme box */
+        body {
+            background-color: #BFDBAE;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        select, option {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+            color: #333;
+        }
+
+        textarea {
+            width: 80%;
+            padding: 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form action="/board" method="post">
+        <label for="game">Choose a game:</label>
+        <select name="game" id="game">
+            <option value="mono">Monopoly</option>
+            <option value="clue">Clue</option>
+            <option value="uno">Uno</option>
+        </select> <br>
+        <br>
+        <label for="theme">What theme?</label>
+        <textarea id="theme" name="theme" rows="4" cols="50" placeholder="E.g. Cities, Games, Movies, etc."></textarea><br>
+        <input type="submit" value="Generate Game">
+    </form>
+    
+</body>
+</html>
